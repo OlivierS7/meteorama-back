@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource Meteorama {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Cities {
+  id                  String  @id @map("_id")
+  city_code           String
+  department_name     String
+  department_number   String
+  insee_code          String
+  label               String
+  latitude            String?
+  longitude           String?
+  region_geojson_name String
+  region_name         String
+  zip_code            String
+}

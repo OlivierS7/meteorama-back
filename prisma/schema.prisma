@@ -21,3 +21,9 @@ model Cities {
   region_name         String
   zip_code            String
 }
+
+model RateLimiterFlexible {
+  key     String   @id @map("_id")
+  points  Int
+  expire  DateTime?
+}

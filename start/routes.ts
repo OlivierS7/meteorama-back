@@ -25,3 +25,5 @@ Route.get('/', async () => {
 })
 
 Route.resource('cities', 'CitiesController')
+
+Route.resource('weather', 'WeatherController')

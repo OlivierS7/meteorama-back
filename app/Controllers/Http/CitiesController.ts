@@ -5,7 +5,7 @@ import Cache from '@ioc:Kaperskyguru/Adonis-Cache'
 export default class CitiesController {
   public async index({ response }: HttpContextContract) {
     try {
-      const cities = await Cache.remember('cities', 60, async function () {
+      const cities = await Cache.remember('cities', 1140, async function () {
         return await prisma.cities.findMany()
       })
       return response.status(200).json(cities)
